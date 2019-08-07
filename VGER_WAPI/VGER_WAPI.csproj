@@ -1,0 +1,191 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Configurations>Debug;Release;VGER_APC;VGER_DXB;VGER_IND;VGER_LON;VGER_DEV;VGER_UAT;VGER_DXBUAT</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\$(Configuration)\netcoreapp2.0\VGER_WAPI.xml</DocumentationFile>
+    <NoWarn>1701;1702;1705;1591</NoWarn>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.0\VGER_WAPI.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='VGER_DXBUAT|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.0\VGER_WAPI.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='VGER_UAT|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.0\VGER_WAPI.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='VGER_DEV|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.0\VGER_WAPI.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='VGER_LON|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.0\VGER_WAPI.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='VGER_IND|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.0\VGER_WAPI.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='VGER_DXB|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.0\VGER_WAPI.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='VGER_APC|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.0\VGER_WAPI.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Repositories\Accomodation\**" />
+    <Compile Remove="Repositories\Activities\**" />
+    <Compile Remove="Repositories\Meals\**" />
+    <Compile Remove="Repositories\QRFNonPackagePrice\**" />
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="Repositories\Accomodation\**" />
+    <Content Remove="Repositories\Activities\**" />
+    <Content Remove="Repositories\Meals\**" />
+    <Content Remove="Repositories\QRFNonPackagePrice\**" />
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="Repositories\Accomodation\**" />
+    <EmbeddedResource Remove="Repositories\Activities\**" />
+    <EmbeddedResource Remove="Repositories\Meals\**" />
+    <EmbeddedResource Remove="Repositories\QRFNonPackagePrice\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="Repositories\Accomodation\**" />
+    <None Remove="Repositories\Activities\**" />
+    <None Remove="Repositories\Meals\**" />
+    <None Remove="Repositories\QRFNonPackagePrice\**" />
+    <None Remove="wwwroot\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\AccomodationController.cs" />
+    <Compile Remove="Controllers\ActivitiesController.cs" />
+    <Compile Remove="Controllers\MealsController.cs" />
+    <Compile Remove="Controllers\QRFNonPackagePriceController.cs" />
+    <Compile Remove="Filters\MongoLogger.cs" />
+    <Compile Remove="Filters\MongoLoggerFactoryExtensions  .cs" />
+    <Compile Remove="Filters\MongoLoggerProvider.cs" />
+    <Compile Remove="Models\MongoEntities\mPositionOld.cs" />
+    <Compile Remove="Models\MongoEntities\mProducts.cs" />
+    <Compile Remove="Repositories\Booking\BookingRepository-1.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Microsoft.Office.Interop.Outlook" Version="15.0.4797.1003" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" />
+    <PackageReference Include="MongoDB.Driver" Version="2.5.0" />
+    <PackageReference Include="NETCore.MailKit" Version="2.0.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VGER_WAPI_CLASSES\VGER_WAPI_CLASSES.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="Models\MongoEntities\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\Templates\Mail\AcceptWithoutProposal.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Templates\Mail\Reject_Commercial.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Templates\Mail\Reject_Quotation.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Templates\Mail\SuggestSendToClient.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Templates\Mail\Password_Recover.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Templates\Mail\Approve_Quotation.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Templates\Mail\AcceptSendToClient.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Templates\Mail\Submit_Commercial.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Templates\Mail\Submit_Quote.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Update="Resources\Templates\Mail\HotelBookingReservationRequest.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Update="Resources\Templates\Mail\GoAheadBooking.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Update="Resources\Templates\Mail\HotelBookingCancellation.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Update="Resources\Templates\Mail\HotelAvailableEmail.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Update="Resources\Templates\Mail\HotelBookingConfirmation.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Update="Resources\Templates\Mail\HotelBookingProvisional.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Update="Resources\Templates\Mail\HotelNotAvailableEmail.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Update="Resources\Templates\Mail\HotelProvisionalBookingCancellation.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Update="Resources\Templates\Mail\Followup.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Update="Resources\Templates\Mail\Followup-Expensive.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Update="Resources\Templates\Mail\ExtendOptionDate.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Update="Resources\Templates\Mail\Quote_Followup.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Update="Resources\Templates\Mail\ErrorReport.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+		<None Update="Resources\Templates\Mail\OPSBookingConfirmation.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>	
+	<None Update="Resources\Templates\Mail\OPSRoomingList.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>	
+	<None Update="Resources\Templates\Mail\OPSPosAmendment.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>	
+	<None Update="Resources\Templates\PDF\OPSPositionVoucher.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Update="Resources\Templates\PDF\OPSRoomingList.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties Properties_4launchSettings_1json__JSONSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

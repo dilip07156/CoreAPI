@@ -1,0 +1,320 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VGER_WAPI</name>
+    </assembly>
+    <members>
+        <member name="M:VGER_WAPI.Controllers.EventController.GetEventsByCityandDate(VGER_WAPI_CLASSES.EventRequest)">
+            <summary>
+            Get Events By City and Date
+            </summary>
+            <param name="eventRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.GenericController.GetNextReferenceNumber(VGER_WAPI_CLASSES.QRFCounterRequest)">
+            <summary>
+            Method to get reference number based on CounterType
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.MasterDataController.GetGenericMasterForType(VGER_WAPI_CLASSES.MasterTypeRequest)">
+            <summary>
+            Method for getting Product Attributes
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.MasterDataController.GetCityNames(VGER_WAPI_CLASSES.CityLookupRequest)">
+            <summary>
+            Method to get cities based on city name
+            </summary>
+            <param name="cityLookupRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.MasterDataController.GetCurrencyList">
+            <summary>
+            Method for getting all the currencies
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.MasterDataController.GetCoachSizes">
+            <summary>
+            Method for getting Coach Sizes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.ProductController.GetProductDetailsBySearchCriteria(VGER_WAPI_CLASSES.ProductSearchReq)">
+            <summary>
+            Get Product details by Search Param
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.ProductController.GetProductCategoryByProductID(VGER_WAPI_CLASSES.ProdCategoryRangeGetReq)">
+             <summary>
+            Get Product Category By ProductID
+             </summary>
+             <param name="request"></param>
+             <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.ProductController.GetContractRatesByProductID(VGER_WAPI_CLASSES.ProdContractGetReq)">
+             <summary>
+            Get Contract Rates By ProductID
+             </summary>
+             <param name="request"></param>
+             <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.ProductController.GetProdCatDefByName(VGER_WAPI_CLASSES.ProdCatDefGetReq)">
+             <summary>
+            Get Product Cat Def By Name
+             </summary>
+             <param name="request"></param>
+             <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.ProductController.GetProdAttributeDetailsByNameOrVal(VGER_WAPI_CLASSES.ProductAttributeReq)">
+             <summary>
+            Get Product Attribute Details By Name or Val
+             </summary>
+             <param name="request"></param>
+             <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.QuoteController.GetAgentCompanies(VGER_WAPI_CLASSES.AgentCompanyReq)">
+            <summary>
+            Get Agent Details
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.QuoteController.GetContactsForAgentCompany(VGER_WAPI_CLASSES.AgentContactReq)">
+            <summary>
+            Get Contact details by Agent Id
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.QuoteController.GetContactDetailsByAgentAndContactID(VGER_WAPI_CLASSES.AgentContactDetailsReq)">
+            <summary>
+            Get Contact details by Agent Id and Contact Id
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.QuoteController.InsertUpdateQRFAgentDetails(VGER_WAPI_CLASSES.QUOTEAgentSetReq)">
+            <summary>
+            Insert /Update Quote Agent details
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.QuoteController.GetQRFAgentDetailsBySearchCriteria(VGER_WAPI_CLASSES.QuoteSearchReq)">
+            <summary>
+            Get QRF Agent details by serach param
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.QuoteController.GetQRFAgentDetailsByQRFID(VGER_WAPI_CLASSES.QuoteAgentGetReq)">
+            <summary>
+            Get Quote Agent details by QRF ID
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.QuoteController.GetFollowUpForQRF_Id(VGER_WAPI_CLASSES.QrfFollowUpRequest)">
+            <summary>
+            Method to get followup for requested QRF_Id
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.QuoteController.SetFollowUpForQRF_Id(VGER_WAPI_CLASSES.QrfFollowUpSetRequest)">
+            <summary>
+            Method to set followup for requested QRF_Id
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.QuoteController.SetDepartureDatesForQRF_Id(VGER_WAPI_CLASSES.DepartureDateSetRequest)">
+            <summary>
+            Insert Update Departures for a QRF
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.QuoteController.GetDepartureDatesForQRF_Id(VGER_WAPI_CLASSES.DepartureDateGetRequest)">
+            <summary>
+            Get Departures for a QRF
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.QuoteController.GetPaxSlabDetailsForQRF_Id(VGER_WAPI_CLASSES.PaxGetRequest)">
+            <summary>
+            Get PaxSlabDetails for a QRF
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.QuoteController.SetPaxSlabDetailsForQRF_Id(VGER_WAPI_CLASSES.PaxSetRequest)">
+            <summary>
+            Insert update PaxSlabDetails for a QRF
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.QuoteController.GetQRFRouteDetailsByQRFID(VGER_WAPI_CLASSES.RoutingGetReq)">
+            <summary>
+            Get QRF Route Details By QRFID
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.QuoteController.InsertUpdateQRFRouteDetails(VGER_WAPI_CLASSES.RoutingSetReq)">
+            <summary>
+            Insert /Update Quote Route details
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.QuoteController.GetQRFMarginDetailsByQRFID(VGER_WAPI_CLASSES.MarginGetReq)">
+            <summary>
+            Get QRF Margin Details By QRFID
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.QuoteController.InsertUpdateQRFMarginDetails(VGER_WAPI_CLASSES.MarginSetReq)">
+            <summary>
+            Insert /Update Quote Margin details
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.QuoteController.GetActiveCurrencyList(VGER_WAPI_CLASSES.CurrencyGetReq)">
+            <summary>
+            Get Active Currency List
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.UserController.RequestToken(VGER_WAPI_CLASSES.LoginRequest)">
+            <summary>
+            Method to Authenticate user and Generate JWT token
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VGER_WAPI.Controllers.UserController.GetUserDetails(VGER_WAPI_CLASSES.UserDetailsRequest)">
+            <summary>
+            Method to get user details
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:VGER_WAPI.Models.ErrorLog.Id">
+            <summary>  
+            Gets or sets the Error log identifier.  
+            </summary>  
+            <value>  
+            The Error log identifier.  
+            </value>  
+        </member>
+        <member name="P:VGER_WAPI.Models.ErrorLog.Date">
+            <summary>  
+            Gets or sets the date.  
+            </summary>  
+            <value>  
+            The date.  
+            </value>  
+        </member>
+        <member name="P:VGER_WAPI.Models.ErrorLog.Thread">
+            <summary>  
+            Gets or sets the thread.  
+            </summary>  
+            <value>  
+            The thread.  
+            </value>  
+        </member>
+        <member name="P:VGER_WAPI.Models.ErrorLog.Level">
+            <summary>  
+            Gets or sets the level.  
+            </summary>  
+            <value>  
+            The level.  
+            </value>  
+        </member>
+        <member name="P:VGER_WAPI.Models.ErrorLog.Logger">
+            <summary>  
+            Gets or sets the logger.  
+            </summary>  
+            <value>  
+            The logger.  
+            </value>  
+        </member>
+        <member name="P:VGER_WAPI.Models.ErrorLog.Message">
+            <summary>  
+            Gets or sets the message.  
+            </summary>  
+            <value>  
+            The message.  
+            </value>  
+        </member>
+        <member name="P:VGER_WAPI.Models.ErrorLog.Exception">
+            <summary>  
+            Gets or sets the exception.  
+            </summary>  
+            <value>  
+            The exception.  
+            </value>  
+        </member>
+        <member name="P:VGER_WAPI.Models.ErrorLog.UserAgent">
+            <summary>  
+            Gets or sets the user agent.  
+            </summary>  
+            <value>  
+            The user agent.  
+            </value>  
+        </member>
+        <member name="P:VGER_WAPI.Models.ErrorLog.IpAddress">
+            <summary>  
+            Gets or sets the ip address.  
+            </summary>  
+            <value>  
+            The ip address.  
+            </value>  
+        </member>
+        <member name="P:VGER_WAPI.Models.ErrorLog.Url">
+            <summary>  
+            Gets or sets the URL.  
+            </summary>  
+            <value>  
+            The URL.  
+            </value>  
+        </member>
+        <member name="P:VGER_WAPI.Models.ErrorLog.Referrer">
+            <summary>  
+            Gets or sets the referrer.  
+            </summary>  
+            <value>  
+            The referrer.  
+            </value>  
+        </member>
+        <member name="P:VGER_WAPI.Models.ErrorLog.UserName">
+            <summary>  
+            Gets or sets the name of the user.  
+            </summary>  
+            <value>  
+            The name of the user.  
+            </value>  
+        </member>
+        <member name="P:VGER_WAPI.Models.ErrorLog.ServerName">
+            <summary>  
+            Gets or sets the name of the server.  
+            </summary>  
+            <value>  
+            The name of the server.  
+            </value>  
+        </member>
+    </members>
+</doc>

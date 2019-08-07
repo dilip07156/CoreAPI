@@ -1,0 +1,111 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="{{URLinitial}}/resources/css/style_report.css" rel="stylesheet" type="text/css">
+    <link href="{{URLinitial}}/resources/css/proposal_report.css" rel="stylesheet" type="text/css" />
+    <title>VOUCHER</title>
+</head>
+<body>    
+    <br />
+    <table width="950" border="0" align="center" cellpadding="0" cellspacing="0" class="tbl-center">
+        <tr>
+            <td>
+                <h1 class="heading">Rooming List</h1>
+            </td>
+        </tr>
+        <tr><td>&nbsp;</td></tr>
+    </table>
+    <table width="950" border="0" align="center" cellpadding="0" cellspacing="0" class="plain-table">
+        <tr>
+            <td class="bck-white padl15"><b>Booking Reference Number</b></td>
+            <td class="bck-white padl15">{{BOOKING_REF_NO}}</td>
+            <td class="bck-white padl15"><b>Service Reference Number</b></td>
+            <td class="bck-white padl15">{{BOOKING_REF_NO}} - {{POS_ORDERNO}}</td>
+        </tr>
+        <tr>
+            <td class="bck-white padl15"><b>Passenger Breakdown</b></td>
+            <td class="bck-white padl15">{{POS_PASSENGER_BREAKDOWN}}</td>
+            <td class="bck-white padl15"><b>Nationality</b></td>
+            <td class="bck-white padl15">{{Nationality}}</td>
+        </tr>
+        <tr>
+            <td class="bck-white padl15"><b>Booking Start Date: </b></td>
+            <td class="bck-white padl15">{{Book_START_DATE}}</td>
+            <td class="bck-white padl15"><b>Booking End Date: </b></td>
+            <td class="bck-white padl15">{{Book_END_Date}}</td>
+        </tr>
+        <tr>
+            <td class="bck-white padl15"><b>Tour Leader Name: </b></td>
+            <td class="bck-white padl15">{{Tour_Leader_Name}}</td>
+            <td class="bck-white padl15"><b>Tour Leader Contact Details: </b></td>
+            <td class="bck-white padl15">{{Tour_Leader_Contact_Det}}</td>
+        </tr>
+    </table>
+    <table width="950" border="0" align="center" cellpadding="0" cellspacing="0" class="tbl-center">
+        <tr><td colspan="4">&nbsp;</td></tr>
+    </table>
+    <table width="950" border="0" align="center" cellpadding="0" cellspacing="0" class="tbl-center">
+        <tr>
+            <td valign="top">
+                <p>
+                    <b>
+                        Service Details:{{PRODUCT_NAME}}
+                    </b>
+                </p>
+            </td>
+        </tr>
+    </table>
+    <table width="950" border="0" align="center" cellpadding="0" cellspacing="0" class="tbl-center">
+        <tr><td colspan="4">&nbsp;</td></tr>
+    </table>
+    <table width="950" border="0" align="center" cellpadding="0" cellspacing="0" class="plain-table">
+        <tr>
+            <td class="bck-white padl10"><b>Start Date: </b></td>
+            <td class="bck-white padl10">{{POS_START_DATE}}</td>
+            <td class="bck-white padl10"><b>End Date: </b></td>
+            <td class="bck-white padl10">{{POS_END_Date}}</td>
+        </tr>
+        <tr>
+            <td class="bck-white padl10"><b>Check In: </b></td>
+            <td class="bck-white padl10">{{POS_START_TIME}}</td>
+            <td class="bck-white padl10"><b>Check Out: </b></td>
+            <td class="bck-white padl10">{{POS_END_TIME}}</td>
+        </tr>
+        <tr>
+            <td class="bck-white padl10"><b>Board Basis: </b></td>
+            <td class="bck-white padl10">{{POS_Board_Basis}}</td>
+            <td class="bck-white padl10"><b>Porterage Required: </b></td>
+            <td class="bck-white padl10">{{Porterage}}</td>
+        </tr>
+    </table>
+    <table width="950" border="0" align="center" cellpadding="0" cellspacing="0" class="tbl-center">
+        <tr><td colspan="4">&nbsp;</td></tr>
+    </table>
+    <table width="950" border="0" align="center" cellpadding="0" cellspacing="0" class="tbl-center">
+        <tr><td valign="top"><h2>Rooming List</h2></td></tr>
+    </table>
+    <table width="950" border="0" cellpadding="0" cellspacing="0" class="plain-table">
+        <tr>
+            <td align="center" valign="middle" height="40">Passenger Number</td>
+            <td align="center" valign="middle" height="40">Passenger Name</td>
+            <td align="center" valign="middle" height="40">Date of Birth</td>
+            <td align="center" valign="middle" height="40">Sex</td>
+            <td align="center" valign="middle" height="40">Passport</td>
+            <td align="center" valign="middle" height="40">Passport Expiry</td>
+            <td align="center" valign="middle" height="40">Room Type</td>
+            <td align="center" valign="middle" height="40">Room Number</td>
+            <td align="center" valign="middle" height="40">Is Tour Leader</td>
+            <td align="center" valign="middle" height="40">SRS</td>
+            <td align="center" valign="middle" height="40">Comment</td>
+        </tr>
+        <tr>{{Rooming_List}}</tr>
+    </table>
+    <table width="950" border="0" align="center" cellpadding="0" cellspacing="0" class="tbl-center">
+        <tr><td width="400" valign="top"><h2>Invoicing</h2></td><td width="400" valign="top"><h2>City Tax</h2></td></tr>
+        <tr><td valign="top"> <p>We kindly remind you that our invoicing address is as below</p></td><td><p>City Tax is payable on the spot by the Tour Leader.</p></td></tr>
+        <tr><td valign="top"> <p>whatisyourfinanceemail@address.com</p></td></tr>
+    </table>
+    
+</body>
+</html>

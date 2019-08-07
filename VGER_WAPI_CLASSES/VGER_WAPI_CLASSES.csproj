@@ -1,0 +1,94 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Configurations>Debug;Release;VGER_APC;VGER_DXB;VGER_IND;VGER_LON;VGER_DEV;VGER_UAT;VGER_DXBUAT</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp2.0\VGER_WAPI_CLASSES.xml</DocumentationFile>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningsAsErrors>NU1605</WarningsAsErrors>
+    <NoWarn>1701;1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.0\VGER_WAPI_CLASSES.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='VGER_DXBUAT|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.0\VGER_WAPI_CLASSES.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='VGER_UAT|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.0\VGER_WAPI_CLASSES.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='VGER_DEV|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.0\VGER_WAPI_CLASSES.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='VGER_LON|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.0\VGER_WAPI_CLASSES.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='VGER_IND|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.0\VGER_WAPI_CLASSES.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='VGER_DXB|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.0\VGER_WAPI_CLASSES.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='VGER_APC|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.0\VGER_WAPI_CLASSES.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Accomodation\**" />
+    <Compile Remove="Activities\**" />
+    <Compile Remove="Costing\QRFNonPackagePrice\**" />
+    <Compile Remove="Meals\**" />
+    <EmbeddedResource Remove="Accomodation\**" />
+    <EmbeddedResource Remove="Activities\**" />
+    <EmbeddedResource Remove="Costing\QRFNonPackagePrice\**" />
+    <EmbeddedResource Remove="Meals\**" />
+    <None Remove="Accomodation\**" />
+    <None Remove="Activities\**" />
+    <None Remove="Costing\QRFNonPackagePrice\**" />
+    <None Remove="Meals\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Product\mProducts.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="2.5.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\MongoEntities\AgentApproval\" />
+    <Folder Include="PushToSql\Booking\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>System</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>System.Data</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>System.Drawing</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Integration\ManageOpportunityReq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>
